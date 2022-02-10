@@ -6,58 +6,73 @@
   <body>
     <h1>CatPhotoApp</h1>
     <main>
-      <section>
-        <h2>Cat Photos</h2>
-        <!-- TODO: Add link to cat photos -->
-        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
-      </section>
-      <section>
-        <h2>Cat Lists</h2>
-        <h3>Things cats love:</h3>
+      <!-- Internal link -->
+      <a href="#footer">Jump to Bottom</a>
+      
+      <!-- External link -->
+      <p>View more <a href="https://www.freecatphotoapp.com" target="_blank">cat photos</a>.</p>
+
+      <!-- Creating a dead link with a hash symbol with img element nested within -->
+      <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+
+      <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+      <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+      <p>Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch at owner, destroy all furniture, especially couch or lay on arms while you're using the keyboard. Missing until dinner time toy mouse squeak roll over. With tail in the air lounge in doorway. Man running from cops stops to pet cats, goes to jail.</p>
+      <p>Intently stare at the same spot poop in the plant pot but kitten is playing with dead mouse. Get video posted to internet for chasing red dot leave fur on owners clothes meow to be let out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for no reason. Meow to be let out play time intently sniff hand run outside as soon as door open yet destroy couch.</p>
+
+      <div>
+        <p>Things cats love:</p>
         <ul>
-          <li>cat nip</li>
-          <li>laser pointers</li>
-          <li>lasagna</li>
+          <li>Eat food sachet</li>
+          <li>Sleep on a soft pillow</li>
+          <li>Play with the red dot</li>
         </ul>
-        <figure>
-          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
-          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
-        </figure>
-        <h3>Top 3 things cats hate:</h3>
+      
+        <p>Top 3 things cats hate:</p>
         <ol>
-          <li>flea treatment</li>
-          <li>thunder</li>
-          <li>other cats</li>
+          <li>Stay alone in the house</li>
+          <li>Take omega pill</li>
+          <li>To be ignored by its humans</li>
         </ol>
-        <figure>
-          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
-          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
-        </figure>
-      </section>
-      <section>
-        <h2>Cat Form</h2>
-        <form action="https://freecatphotoapp.com/submit-cat-photo">
-          <fieldset>
-            <legend>Is your cat an indoor or outdoor cat?</legend>
-            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
-            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
-          </fieldset>
-          <fieldset>
-            <legend>What's your cat's personality?</legend>
-            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
-            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
-            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
-          </fieldset>
-          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
-          <button type="submit">Submit</button>
-        </form>
-      </section>
+      </div>
+
+      <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+        
+        <!--RADIO BUTTONS INPUT-->
+
+        <!-- Strategy 1 to define label associated with input 
+        <label>
+          <input value="indoor1" type="radio" name="indoor1-outdoor1"> Indoor1
+        </label>
+        <label>
+          <input value="outdoor1" type="radio" name="indoor1-outdoor1"> Outdoor1
+        </label> -->
+
+        <!-- BEST PRACTICE Strategy 2 to define label associated with input  
+        <input id="indoor2" value="indoor2" type="radio" name="indoor2-outdoor2"> <label for="indoor2"> Indoor2 </label>
+        <input id="outdoor2" value="outdoor2" type="radio" name="indoor2-outdoor2"> <label for="outdoor2"> Outdoor2 </label> -->
+
+        <!-- BEST PRACTICE Strategy 3 to define label associated with input -->
+        <label for="indoor3">
+          <input id="indoor3" value="indoor3" type="radio" name="indoor3-outdoor3" checked> Indoor
+        </label>
+        <label for="outdoor3">
+          <input id="outdoor3" value="outdoor3" type="radio" name="indoor3-outdoor3"> Outdoor
+        </label><br>
+
+        <!--CHECKBOXES INPUT-->
+
+        <label for="loving"><input id="loving" value="loving" type="checkbox" name="personality" checked> Loving</label>
+        <label for="lazy"><input id="lazy" value="lazy" type="checkbox" name="personality"> Lazy</label>
+        <label for="energetic"><input id="energetic" value="energetic" type="checkbox" name="personality"> Energetic</label><br>
+
+        <input type="text" placeholder="cat photo URL" required>
+        <button type="submit">Submit</button>
+
+      </form>
+
     </main>
-    <footer>
-      <p>
-        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
-      </p>
-    </footer>
+    <!-- Target of the Internal link -->
+    <footer id="footer">Copyright Cat Photo App</footer>
   </body>
 </html>
