@@ -1,0 +1,39 @@
+/* Group selector: allows the same rule to be applied to different parts of the HTML document, combining element, class and ID strategies. */
+h1, h2, p {
+  text-align: center;
+  }
+
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg); 
+}
+
+/* type selectors to style elements 
+div {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/*class selectors to style elements */
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flavor{
+  text-align: left;
+  width: 75%;
+}
+
+.price{
+  text-align: right;
+  width: 25%;
+}
+
+/* descending selector: allows to define rules for every element directly/indirectly nested in another*/
+.item p{
+  display: inline-block;
+}
