@@ -1,10 +1,17 @@
-/* Group selector: allows the same rule to be applied to different parts of the HTML document, combining element, class and ID strategies. */
-h1, h2, p {
-  text-align: center;
-  }
-
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg); 
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+/*class selectors to style elements */
+.menu {
+  width: 80%;
+  max-width: 500px;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
 }
 
 /* type selectors to style elements 
@@ -15,25 +22,89 @@ div {
   margin-right: auto;
 } */
 
-/*class selectors to style elements */
-.menu {
-  width: 80%;
-  background-color: burlywood;
-  margin-left: auto;
-  margin-right: auto;
+/* Group selector: allows the same rule to be applied to different parts of the HTML document, combining element, class and ID strategies. */
+h1, h2, p {
+  text-align: center;
+  }
+
+h1, h2 {
+  font-family: Impact, serif;
 }
 
-.flavor{
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.established {
+  font-style: italic;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25px;
+}
+
+hr {
+  height: 2px;
+  background-color: brown;
+  border-color: brown;
+}
+
+/* descending selector: allows to define rules for every element directly/indirectly nested in another*/
+.item p {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.dessert,.flavor {
   text-align: left;
   width: 75%;
 }
 
-.price{
+.price {
   text-align: right;
   width: 25%;
 }
 
-/* descending selector: allows to define rules for every element directly/indirectly nested in another*/
-.item p{
-  display: inline-block;
+/* Last HR element */
+.bottom-line {
+  margin-top: 25px;
+}
+
+/* FOOTER */
+footer {
+  font-size: 14px;
+}
+
+a {
+  color: black; 
+}
+
+/* pseudo-selectors to link that has been visited */
+a:visited { 
+  color: black; 
+}
+
+/* pseudo-selectors - when mouse is over the link */
+a:hover { 
+  color: brown; 
+}
+
+/* pseudo-selectors - when link is actually being clicked */
+a:active { 
+  color: brown; 
+}
+
+.address {
+  margin-bottom: 5px;
 }
