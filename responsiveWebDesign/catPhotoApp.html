@@ -2,15 +2,43 @@
 <html lang="en">
   <head>
     <title>CatPhotoApp</title>
+    
+    <!-- Importing a Google Font 
+    https://fonts.google.com/?query=Lobster [Google Fonts database]
+    https://developers.google.com/fonts/docs/css2 [CSS API update]
+    --> 
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    
+    <!-- Internal CSS (tag)  -->
+    <style>
+      /* CSS Class declaration */
+      .red-text {
+        color: red;
+      }
+      /* Element CSS declaration */
+      p {
+        font-size: 16px;
+        font-family: monospace;
+      }
+      /* font-family: FAMILY_NAME, GENERIC_NAME (optional); 
+      RULES: family names are case-sensitive (unlike generic_name) and you need quotes to use the "Open Sans" font (space in the name), but not to use the Lobster font (no space in the name).*/
+      h1 {
+        font-family: Lobster, monospace;
+      }
+    </style>
   </head>
   <body>
-    <h1>CatPhotoApp</h1>
+    <!-- In-line CSS (attribute)
+    <h1 style="color:red;">CatPhotoApp</h1> -->
+    
+    <h1 class="red-text">CatPhotoApp</h1>
+    
     <main>
       <!-- Internal link -->
       <a href="#footer">Jump to Bottom</a>
       
       <!-- External link -->
-      <p>View more <a href="https://www.freecatphotoapp.com" target="_blank">cat photos</a>.</p>
+      <p class="red-text">Click here to view more <a href="https://www.freecatphotoapp.com" target="_blank">cat photos</a>.</p>
 
       <!-- Creating a dead link with a hash symbol with img element nested within -->
       <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
