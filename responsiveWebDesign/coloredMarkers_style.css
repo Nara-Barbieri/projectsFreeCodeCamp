@@ -1,0 +1,117 @@
+h1 {
+  text-align: center;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+}
+
+.marker {
+  width: 200px;
+  height: 25px;
+  margin: 10px auto;
+}
+
+/* preserved versions
+.red {
+  version 1) background-color: rgb(255, 0, 0);
+    ---Here the proporty is background--color.
+  version 2) background: linear-gradient(90deg, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0,0,255));
+    --- To input linear-gradient function, change the proporty to background.
+  version 3) background: linear-gradient(180deg, rgb(255, 0, 0) 75%, rgb(0, 255, 0), rgb(0, 0, 255));
+    --- Changed the gradientDirection and add a Color-stop to the first color argument.
+  version 4) background: linear-gradient(180deg, rgb(122, 74, 14) 0%, rgb(245, 62, 113) 50%, rgb(162, 27, 27) 100%);
+    --- add Color-stop to the second and third color arguments and changed RGB color to creat a 3D perspective.
+  version 5) background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+    --- The gradientDirection is 180deg by default, allowing a cleaner code.
+*/ 
+
+.red {
+  background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+}
+
+.green {
+  background: linear-gradient(#55680D, #71F53E, #116C31);
+}
+
+.blue {
+  background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+}
+
+/*COLOR SYSTEMS: FLAT COLORS
+1) HTML Color Names (color keywords). 
+  avaliable on https://www.w3schools.com/tags/ref_colornames.asp
+
+2) Subtractive CMYK (cyan, magenta, yellow, black) model used in print - not used on CSS.
+
+3) Additive RGB (red, green, blue) model used in electronic devices. 
+  -Strategy one: RGB function
+    rgb(red, green, blue);
+    Each red, green, and blue value is a number from 0 to 255. 
+      - 0 means that there's 0% of that color, and is black. 
+      - 255 means that there's 100% of that color.
+    
+    WHITE: rgb (255, 255, 255)
+    BLACK: rgb (0, 0, 0)
+    PRIMARY RED: rgb (255, 0, 0)
+    PRIMARY GREEN: rgb (0, 255, 0) 
+      note: the green color of the HTML Color Names is NOT the same as the pure green rgb (0, 255, 0), instead, it is given by rgb(0, 128, 0) or #008000. 
+    PRIMARY BLUE: rgb (0, 0, 255)
+
+    Secondary colors are the colors you get when you combine primary colors. 
+      YELLOW rgb (255, 255, 0) pure RED and pure GREEN
+      CYAN rgb (0, 255, 255) pure GREEN and pure BLUE
+      MAGENTA rgb (255, 0, 255) pure RED and pure BLUE
+
+    Tertiary colors are created by combining a primary with a nearby secondary color.
+      ORANGE rgb (255, 127, 0) combining a primary RED with a nearby secondary color YELLOW
+      CHARTREUSE GREEN rgb (127, 255, 0) combining a primary GREEN with a nearby secondary color YELLOW
+      SPRING GREEN rgb (0, 255, 127) combining a primary GREEN with a nearby secondary color CYAN
+      AZURE rgb (0, 127, 255) combining a primary BLUE with a nearby secondary color CYAN
+      VIOLET rgb (127, 0, 255) combining a primary BLUE with a nearby secondary color MAGENT
+      ROSE  rgb (255, 0, 127) combining a primary RED with a nearby secondary color MAGENTA
+
+  -Strategy two: hexadecimal color code
+    Hex color values start with a # character and take six characters from 0-9 and A-F.
+      Hexadecimal, or base 16 values, go from 0 - 9, then A - F:
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+  
+    The first pair of characters represent red, the second pair represent green, and the third pair represent blue.
+    With hex colors, 00 is 0% of that color, and FF is 100%.
+      WHITE: #FFFFFF
+      BLACK: #000000
+      PRIMARY RED: #FF0000
+      PRIMARY GREEN: #00FF00 
+      PRIMARY BLUE: #0000FF
+  
+  -Strategy three: HSL color code: 
+    The CSS hsl function accepts 3 values: 
+      a number from 0 to 360 for hue
+        If you imagine a color wheel, the hue red is at 0 degrees, green is at 120 degrees, and blue is at 240 degrees.
+      a percentage from 0 to 100 for saturation
+        Saturation is the intensity of a color from 0%, or gray, to 100% for pure color.
+      a percentage from 0 to 100 for lightness.
+        Lightness is how bright a color appears, from 0%, or complete black, to 100%, complete white, with 50% being neutral.     
+*/
+
+/*---*/
+
+/*COLOR SYSTEMS: GRADIENT COLORS
+	A gradient is when one color transitions into another.
+	One thing to remember is that the linear-gradient function actually creates an image element, and is usually paired with the background property which can accept an image as a value.
+		Example: 
+			.class {
+  background: linear-gradient(gradientDirection, color1, color2, ...);
+}
+			 --- gradientDirection is the direction of the line used for the transition.
+				90deg is left-right direction;
+				180deg is top-bottom direction (default).
+			 --- color1 and color2 are color arguments, which are the colors (keywords, hex, rgb, or hsl) that will be used in the transition itself. 
+				This function needs a minimum of two color arguments to work, it can accept many color arguments.
+	
+		    --- Other atributes:
+			The linear-gradient function automatically calculates these values, and places colors evenly along the gradient line by default.
+			Color-stops allow you to fine-tune where colors are placed along the gradient line (a length unit like px or percentages).
+									Ex: linear-gradient(90deg, red 90%, black);	
+*/
