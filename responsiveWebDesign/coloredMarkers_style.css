@@ -13,6 +13,65 @@ h1 {
   margin: 10px auto;
 }
 
+.cap {
+  width: 60px;
+  height: 25px;
+}
+
+/* preserved versions
+version 1) .sleeve {
+  		width: 110px;
+  		height: 25px;
+  		background-color: white;
+  		opacity: 0.5;
+	}
+	--- opacity controled by opacity proporty
+
+version 2) .sleeve {
+  		width: 110px;
+ 		height: 25px;
+  		background-color: rgba(255, 255, 255, 0.5);
+	}
+	--- opacity controled by alpha channel on rgba function
+
+version 3) .sleeve {
+  		width: 110px;
+ 		height: 25px;
+  		background-color: rgba(255, 255, 255, 0.5);
+  		border-left-width: 10px;
+  		border-left-style: solid;
+  		border-left-color: black;
+	}
+	---border proporties are set one by one
+
+version 4) .sleeve {
+  		width: 110px;
+ 		height: 25px;
+  		background-color: rgba(255, 255, 255, 0.5);
+  		border-left: 10px solid black;
+	}
+	---border shorthand property set all data in one line (clear code)
+
+version 5) .sleeve {
+  		width: 110px;
+ 		height: 25px;
+  		background-color: rgba(255, 255, 255, 0.5);
+  		border-left: 10px double rgba(0, 0, 0, 0.75);
+	}
+	---use of rgab function to set border color
+*/
+
+.sleeve {
+  width: 110px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 10px double rgba(0, 0, 0, 0.75);
+}
+
+.cap, .sleeve {
+  display: inline-block;
+}
+
 /* preserved versions
 .red {
   version 1) background-color: rgb(255, 0, 0);
@@ -29,14 +88,17 @@ h1 {
 
 .red {
   background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+  box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
 }
 
 .green {
   background: linear-gradient(#55680D, #71F53E, #116C31);
+  box-shadow: 0 0 20px 0 #3B7E20CC;
 }
 
 .blue {
   background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+  box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
 }
 
 /*COLOR SYSTEMS: FLAT COLORS
@@ -114,4 +176,89 @@ h1 {
 			The linear-gradient function automatically calculates these values, and places colors evenly along the gradient line by default.
 			Color-stops allow you to fine-tune where colors are placed along the gradient line (a length unit like px or percentages).
 									Ex: linear-gradient(90deg, red 90%, black);	
+*/
+
+/*OPACITY CONTROL
+1) With the CSS opacity property, you can control how opaque or transparent an element is. 
+	With the value 0, or 0%, the element will be completely transparent. 
+	At 1.0, or 100%, the element will be completely opaque (default).
+		Example: 
+			selector {
+  				opacity: 0.5;
+				}
+
+2) Another way to set the opacity for an element is with the alpha channel.
+	The rgba function works just like the rgb function, but takes one more number from 0 to 1.0 for the alpha channel:
+		Example: 
+			selector {
+  				background-color: rgba(redValue, greenValue, blueValue, alphaValue);
+				}
+
+	To the hexadecimal color code, add 2 units at the end,
+		00  the element will be completely transparent
+		FF the element will be completely opaque
+		Example: 
+			selector {
+  				background-color: #3B7E20CC;
+				}
+
+	The hsla function works just like the hsl function, but takes one more number from 0 to 1.0 for the alpha channel:
+		Example: 
+			selector {
+  				background-color: hsla(223, 59%, 31%, 0.8);
+				}
+*/
+
+/*BORDER PROPORTIES
+All HTML elements have borders, but are set as none by default.
+	border: set the border on all sides
+	border-left: set border only on the left side
+	border-top: set border only on the top sidev
+		etc. 
+
+Borders have several styles: solid, dashed, dotted, double 
+	Example: 
+		selector {
+  			border-left-style: solid;
+			}
+
+Diferent aspects of the border can be set one by one
+  			Example: 
+				selector {
+					border-left-width: 10px;
+  					border-left-style: solid;
+  					border-left-color: black;
+					}
+
+Shorthand property lets you to set the left border's width, style, and color at the same time.
+  			Example: 
+				selector {
+					border-left: 10px solid black;
+					}
+*/
+
+/*BOX-SHADOW PROPORTIES
+The box-shadow property lets you apply one or more shadows around an element.
+Example: 
+	selector {
+		box-shadow: offsetX offsetY color blurRadius spreadRadius;
+					}
+
+		Both offsetX and offsetY accept number values in px and other CSS units
+			Positive offsetX value moves the shadow right and a negative value moves it left
+			Positive offsetY value moves the shadow down and a negative value moves it up
+			Value of zero (0) don't need to add a unit. 	
+
+		BlurRadius (optional) value set the blur of the shadow
+			If blurRadius value isn't included, it defaults to 0 and produces sharp edges. 
+			The higher the value of blurRadius, the greater the blurring effect is.
+
+		SpreadRadius  (optional) value to spread out the reach of the shadow. 
+			If value isn't included, it's set by defaults to 0
+			To set SpreadRadius value, it is obligatory attribution of the previous values, as the function set each value in especific order.  
+
+Example
+	selector {
+		  box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
 */
