@@ -1,0 +1,88 @@
+/*The vh unit stands for viewport height, and is relative to 1% of the height of the viewport.
+An element with height of 100vh have a height that is equal to 100% of the viewport height. This means the element's height will span the entire visible height of the user's browser window, regardless of its content or the scrolling position. */
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+/*The vw unit stands for viewport width, and is relative to 1% of the width of the viewport.*/
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid rgb(59, 59, 79);
+}
+
+/*To define a specific formatting for the last element, for example, next to the footer, you can use the CSS pseudo-class "selector:last-of-type"*/
+fieldset:last-of-type{
+  border-bottom: none;
+}
+
+/*As label elements are inline by default, they are all displayed side by side on the same line*/
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+/* Relative unit in CSS used for sizing elements
+rem unit stands for root em, and is  based on the font size of the root (<html>) element.
+  For example, if the root font size is set to 16px, then 1rem is equal to 16px.
+em unit is relative to the font-size of the current element - the element itself (if it is directly defined) or its parent.
+  For example, if a p element has a font-size of 16px and line-height of 2em, the calculated line-height will be 32px. If span element has font-size of 0.5em and it is nested in a div element in which the font-size is 30px, the span element will have a calculated size of 15px.*/
+
+input, textarea, select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+input, textarea {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+/*width of unset will remove the earlier rule which set all the input elements to width: 100%.*/
+.inline{
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+/*Attribute selector: selects an element based on the given attribute value.
+Example: element[proporty="value"]*/
+input[type="submit"] {
+  display: block;
+  min-width: 300px;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+}
+
+/*By default, a padding of 1px 2px is given to input elements you can type in*/
+input[type="file"]{
+  padding: 1px 2px;
+}
+
+a{
+  color: #dfdfe2;
+}

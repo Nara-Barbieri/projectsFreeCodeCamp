@@ -6,7 +6,8 @@ Responsive Web Design (Legacy & New) - HTML (Hypertext Markup Language) for cont
 
   - __catPhotoApp(NEW)__: Learning HTML by Building a Cat Photo App;
   - __cafeMenu(NEW)__: Learning Basic CSS by Building a menu page for a cafe webpage.
-  - __coloredMarkers__: Learn CSS colors by building a set of colored markers;  
+  - __coloredMarkers__: Learning CSS colors by Building a set of colored markers;
+  - __registrationForm__: Learning HTML Forms by Building a Registration Form;   
   - __catPhotoApp(LEGACY)__: Basic HTML and HTML5 / Basic CSS;
   - __penguinCSSart(LEGACY)__: CSS variable and media query to change a variable;
   - __appliedVisualDesign(LEGACY)__: a combination of typography, color theory, graphics, animation, page layout, and more.
