@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Greener Choices</title>
+    <link rel="stylesheet" href="surveyForm_style.css" >
+  </head>
+  <body>
+    <h1 id="title">Greener Choices Survey Form</h1>
+    <p id="description">  Thank you for taking the time to help us bloom!  Let's grow wild!</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name">Name <input id="name" type="text" placeholder="Enter your name" required /></label>
+        <label id="email-label" for="email">Email <input id="email" type="email" placeholder="Enter your email" required /></label>
+        <label id="number-label" for="number">Age (optional) <input id="number" type="number" min="18" max="120" placeholder="Enter your age (min.18)" /></label>
+      </fieldset>
+      <fieldset>
+        <label for="dropdown"> Tell us, what's your plant style? 
+          <select id="dropdown">
+            <option value=""> Select one</option>
+            <option value="1"> Leafy legends</option>
+            <option value="2">Flower powerhouses</option>
+            <option value="3">Tree huggers</option>
+            <option value="4">Climbing champs</option>
+            <option value="5">Other</option>
+          </select>
+        </label>
+        <p>Ever play plant matchmaker and gift your green babies to your loved ones?</p>
+        <label for="Definitely"> <input value="1" id="Definitely" type="radio" name="gift-options" class="inline" />Definitely! My plant babies are spreading their leafy love. </label>
+        <label for="Maybe"> <input value="2" id="Maybe" type="radio" name="gift-options" class="inline" />Maybe, depends on how attached I am to my green squad. </label>
+        <label for="Never"> <input value="3" id="Never" type="radio" name="gift-options" class="inline" />Never gonna give you up, baby plants! They're all mine.  </label>
+      </fieldset>
+      <fieldset>
+        <p>Yay, you've got adorable plant coins to indulge at the fanciest plant wonderland. Pick the options that make your heart skip a leaf: </p>
+        <label for="plant1" ><input value="1" id="plant1" type="checkbox" name="plant-choice" class="inline" />Rare Succulents </label>
+        <label for="plant2" ><input value="2" id="plant2" type="checkbox" name="plant-choice" class="inline" />Fragrant Herbs </label>
+        <label for="plant3" ><input value="3" id="plant3" type="checkbox" name="plant-choice" class="inline" />Miniature Bonsai Trees </label>
+        <label for="plant4" ><input value="4" id="plant4" type="checkbox" name="plant-choice" class="inline" />Colorful Orchids </label>
+        <label for="plant5" ><input value="5" id="plant5" type="checkbox" name="plant-choice" class="inline" />Vibrant Flowering Vines </label>
+        <label for="plant6" ><input value="6" id="plant6" type="checkbox" name="plant-choice" class="inline" />Terrarium mini ecosystems </label>
+        <label for="plant7" ><input value="7" id="plant7" type="checkbox" name="plant-choice" class="inline" />Majestic Ferns </label>
+        <label for="plant8" ><input value="8" id="plant8" type="checkbox" name="plant-choice" class="inline" />Salvias to attract pollinators </label>
+        <label for="plant9" ><input value="9" id="plant9" type="checkbox" name="plant-choice" class="inline" />My plant-loving heart can't handle the challenge! </label>
+        <label for="argument">Did we miss your plant crush? Spill the leaves on why it's special to you! If you win us over, we might just add it to our garden party!
+          <textarea id="argument" name="argument" rows="5" cols="30" placeholder="Absolutely! My all-time favorite is..."></textarea>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
