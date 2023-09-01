@@ -1,0 +1,67 @@
+.frame {
+  border: solid black 50px;
+  width: 500px;
+  padding: 50px;
+  margin: 20px auto;
+}
+
+.canvas {
+  width: 500px;
+  height: 600px;
+  background-color: #4d0f00;
+  /*See comment on .one.
+  Solution 1. 
+  padding: 1px;
+  creating a padding element between the margins of .canvas and .one, prevents these margins from collapsing (which would displace the .canvas downwards - inside the .frame) 
+  Solution 2. 
+  Replace the padding property with overflow set to hidden clips the canvas and set it back to its original dimensions, as well as prevents the .canvas downwards displacement*/
+  overflow: hidden;
+  filter: blur(2px);
+}
+
+.one {
+  width: 425px;
+  height: 150px;
+  background-color: #efb762;
+  /* as .one and .canvas have overlapping contents, without border or padding between then, adding a margin to .one, at first, also shifts the .canvas downwards, due to margin collapse.*/
+  margin: 20px auto;
+  box-shadow: 0 0 3px 3px #efb762;
+  /* for BOX-SHADOW PROPORTIES, see coloredMarkers_style.css file */
+  border-radius: 9px;
+  transform: rotate(-0.6deg);
+}
+
+/*Summary of the .one margin: 20px auto problem!
+When you want to place a div inside the other:
+- The outer div has no padding or border;
+- The inner div has no padding or border;
+Setting a margin for the inner div will be a problem, as the collapse of the margins of the two divs (inner and outer) will cause the outer div to shift downwards, without the upper margin of the inner div being established.
+
+Solution 1. Define a padding or border (min 1px) for the outer div, creating a "barrier" between the edges of the outer and inner div.
+
+Solution 2. Use the overflow property with value "hidden" in the external div.*/
+
+.two {
+  width: 475px;
+  height: 200px;
+  background-color: #8f0401;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 3px 3px #8f0401;
+  border-radius: 8px 10px;
+  transform: rotate(0.4deg);
+}
+
+.one, .two{
+  filter: blur(1px);
+}
+
+.three {
+  width: 91%;
+  height: 28%;
+  background-color: #b20403;
+  margin: auto;
+  filter: blur(2px);
+  box-shadow: 0 0 5px 5px #b20403;
+  border-radius: 30px 25px 60px 12px;
+  transform: rotate(-0.2deg);
+}
