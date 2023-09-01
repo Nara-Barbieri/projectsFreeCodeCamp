@@ -2,11 +2,12 @@ body {
   width: 100%;
   margin: 0;
   background-image: linear-gradient( 115deg, rgba(60, 159, 113, 0.7), rgba(240, 240, 240, 0.8) ), url(https://images.unsplash.com/photo-1598838073192-05c942ede858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80); 
-  background-size: auto;
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: repeat;
   background-position: center;
   font-family: Calibri,sans-serif;
   font-size: 18px;
+  height: 100%;
 }
 
 h1 {
