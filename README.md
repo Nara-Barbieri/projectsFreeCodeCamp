@@ -14,6 +14,7 @@ Responsive Web Design (New) - HTML (Hypertext Markup Language) for content, and 
 
  ### CERTIFICATION PROJECT TWO: .
   - __rothkoPainting__: Learn the CSS box model by building a Rothko Painting;
+  - __photoGallery__: Learn CSS flexbox by building a Photo Gallery;
  
 
 #### Responsive Web Design available at: &lt; https://www.freecodecamp.org/learn/2022/responsive-web-design/ &gt;
