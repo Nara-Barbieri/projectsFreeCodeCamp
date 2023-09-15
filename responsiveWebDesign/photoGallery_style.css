@@ -1,0 +1,26 @@
+/*Rules to allow viewing the size behavior of elements according to the box-sizing property.
+	.gallery {
+ 		 border: 5px solid red;
+ 		 width: 50%;
+	}
+	img {
+ 		 width: 100%;
+  		border: 5px solid blue;
+  		padding: 5px;
+	}
+Solutions: 
+(Default) content-box model. When an element has a specific width, that width is calculated based only on the element's content. Padding and border values get added to the total width, so the element grows to accommodate these values.
+	* {
+  		box-sizing: content-box;
+	}
+(Alternative and best practice) border-box  model. The total width of the element, including padding and border, will be the explicit width set. The content of the element will shrink to make room for the padding and border.
+	* {
+  		box-sizing: border-box;
+	}
+*/
+
+/* [*] is the universal selector */
+* {
+  box-sizing: border-box;
+}
+
